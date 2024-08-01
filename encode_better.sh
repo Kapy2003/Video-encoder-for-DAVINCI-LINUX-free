@@ -7,6 +7,7 @@ MAGENTA='\e[38;5;206m'     # Hex: #0000FF
 CYAN='\e[38;2;0;255;255m'   # Hex: #00FFFF
 NC='\e[0m'
 
+# write file name or drag-n-drop 
 echo -e "${GREEN}Enter the paths of the videos to transcode(hint:nospaces-between-filename): ${NC}"
 read -a video_recordings
 
@@ -14,7 +15,7 @@ echo -e "${MAGENTA}Where do you want to store the transcoded videos(Default:tran
 read transcoded
 
 if [[ -z $transcoded ]]; then
-  transcoded="/hdd/Videos/obs_recording/transcoded/"
+  transcoded="~/Videos/transcoded/"
 fi
 
 mkdir -p "$transcoded"
